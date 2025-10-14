@@ -1,0 +1,20 @@
+{
+  "name": "zell-wasm-modules",
+  "version": "1.0.0",
+  "description": "WebAssembly modules for offline file processing in ZELL",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:all",
+    "build:all": "npm run build:image && npm run build:audio && npm run build:video && npm run build:pdf",
+    "build:image": "emcc src/image-processor.c -O3 -s WASM=1 -s EXPORTED_FUNCTIONS='[\"_process_image\", \"_compress_image\", \"_resize_image\"]' -s EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]' -o dist/image-processor.js",
+    "build:audio": "emcc src/audio-processor.c -O3 -s WASM=1 -s EXPORTED_FUNCTIONS='[\"_process_audio\", \"_compress_audio\", \"_merge_audio\"]' -s EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]' -o dist/audio-processor.js",
+    "build:video": "emcc src/video-processor.c -O3 -s WASM=1 -s EXPORTED_FUNCTIONS='[\"_process_video\", \"_compress_video\", \"_merge_video\"]' -s EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]' -o dist/video-processor.js",
+    "build:pdf": "emcc src/pdf-processor.c -O3 -s WASM=1 -s EXPORTED_FUNCTIONS='[\"_process_pdf\", \"_merge_pdfs\", \"_extract_text\"]' -s EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]' -o dist/pdf-processor.js",
+    "clean": "rm -rf dist/*"
+  },
+  "devDependencies": {
+    "emscripten": "^3.1.0"
+  }
+}
+
+

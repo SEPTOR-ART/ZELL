@@ -1,0 +1,31 @@
+ZELL File Converter Test Document
+================================
+
+This is a test document for testing ZELL's file conversion capabilities.
+
+Features to test:
+- Text to PDF conversion
+- File compression
+- File editing
+- File compilation
+- File sharing
+
+Test content:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+
+ZELL Features:
+✅ File Conversion (PDF, DOCX, Images, Audio, Video, Archives)
+✅ File Compression (Multiple levels, batch processing)
+✅ File Editing (Images, Audio, Video, Documents, Archives)
+✅ File Compilation (Merge multiple files)
+✅ File Sharing (Email, WhatsApp, Bluetooth, etc.)
+✅ Operation History (Track all operations)
+✅ 100% Offline (No internet required)
+
+Test completed on: [Current Date]
+Test environment: Sandbox
+Test status: Ready for testing
+
+End of test document.
